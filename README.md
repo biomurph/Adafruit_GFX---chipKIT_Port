@@ -24,7 +24,68 @@ Example included is a copy of the Adafruit example, modified to run with this li
 
 ## Drawing Functions:
     color parameter can be BLACK=0 or WHITE=1
+    screen is 96x96 pixels
+    draw functions write bits to the sharpmem_buffer
+    print to the LCD by calling refresh(); after setting up the buffer the way you like
     
+###refresh(void)
+this does the actual writing of pixel data to the screen. call this after callin draw or text functions to display
+
 ###drawPixel(x positoin, y position, color)
 
+###fillScreen(color)
+
 ###drawLine(start x, start y, end x, end y, color)
+
+###drawRect(corner x, corner y, width, height, color)
+start corner is upper left
+
+###fillRect(corner x, corner y, width, height, color)
+start corner is still upper left
+
+###drawRoundRect(corner x, corner y, width, height, radius, color)
+
+###fillRoundRect(corner x, corner y, width, height, radius, color)
+
+###drawTriangle(corner1 x, corner1 y, corner2 x, corner2 y, corner3 x, corner3 y, color)
+
+###fillTriangle(corner1 x, corner1 y, corner2 x, corner2 y, corner3 x, corner3 y, color)
+
+###drawCircle(center x, center y, radius, color)
+
+###fillCircle(center x, center y, radius, color)
+
+###drawBitmap(corner x, corner y, *bitmapArray, width, height, color)
+it's better to keep your bitmap array in progmem, if you can
+-  Image2Code
+This is a handy Java GUI utility to convert a BMP file into the array code necessary to display the image with the drawBitmap function.  Check out the code at ehubin's GitHub repository:
+     https://github.com/ehubin/Adafruit-GFX-Library/tree/master/Img2Code
+
+###drawXBitmap(corner x, corner y, *bitmapArray, width, height, color)
+Draw XBitMap Files (*.xbm), exported from GIMP,
+Usage: Export from GIMP to *.xbm, rename *.xbm to *.c and open in editor.
+C Array can be directly used with this function
+See the pull request here for more details:
+     https://github.com/adafruit/Adafruit-GFX-Library/pull/31
+     
+##Text
+
+###setTextSize(heightMultiplier)
+default font is 8 pixels tall. This function multiplies 8*heightMultiplier
+
+###setCursor(x position, y position)
+
+###setTextColor(color)
+
+###setTextColor(text color, background color)
+sets the text and background. background extends only as big as the charaters printed
+
+###setTextWrap(boolean)
+default is true, so text will wrap at the right edge of the screen
+
+###write(char)
+draws the ascii character specified
+
+###drawChar(x position, y position, char, text color, backgroudn color, text size)
+This function is called by the write(char) command
+
