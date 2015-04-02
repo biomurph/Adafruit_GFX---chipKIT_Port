@@ -31,6 +31,9 @@ Example included is a copy of the Adafruit example, modified to run with this li
 ###refresh(void)
 this does the actual writing of pixel data to the screen. call this after callin draw or text functions to display
 
+###setRotation(angle)
+changes orientation of screen data. angle rotates 90 degrees 0,1,2,3 are allowed
+
 ###drawPixel(x positoin, y position, color)
 
 ###fillScreen(color)
@@ -57,8 +60,7 @@ start corner is still upper left
 
 ###drawBitmap(corner x, corner y, *bitmapArray, width, height, color)
 it's better to keep your bitmap array in progmem, if you can
--  Image2Code
-This is a handy Java GUI utility to convert a BMP file into the array code necessary to display the image with the drawBitmap function.  Check out the code at ehubin's GitHub repository:
+Image2Code is a handy Java GUI utility to convert a BMP file into the array code necessary to display the image with the drawBitmap function.  Check out the code at ehubin's GitHub repository:
      https://github.com/ehubin/Adafruit-GFX-Library/tree/master/Img2Code
 
 ###drawXBitmap(corner x, corner y, *bitmapArray, width, height, color)
