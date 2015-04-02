@@ -20,3 +20,6 @@ Constructor takes two parameters: LCD_SS, DISP
     watch out for pin 10 on Joel's board! it is acting funny
   DISP pin is the Display control pin for the LCD. Can be any pin other than 11,12,13
   
+Example included is a copy of the Adafruit example, modified to run with this library.
+
+## Drawing Functions:
