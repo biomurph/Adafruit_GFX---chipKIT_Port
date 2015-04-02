@@ -23,3 +23,8 @@ Constructor takes two parameters: LCD_SS, DISP
 Example included is a copy of the Adafruit example, modified to run with this library.
 
 ## Drawing Functions:
+    color parameter can be BLACK=0 or WHITE=1
+    
+###drawPixel(x positoin, y position, color)
+
+###drawLine(start x, start y, end x, end y, color)
