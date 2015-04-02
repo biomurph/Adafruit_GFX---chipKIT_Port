@@ -12,7 +12,7 @@ Ported to chipKIT by Joel Murphy. Spring, 2015
     >>>>>  Provide a clock (<1Hz) to EXTCOMIN pin
     >>>>>  For the clock, I am using a 7414 (single Inverter)74AHC1G14GV:
     >>>>>  http://www.mouser.com/ProductDetail/NXP-Semiconductors/74AHC1G14GV125/?qs=P62ublwmbi%2FTMzPIGwYKEw%3D%3D
-    >>>>>  f = 1/0.55*R*C
+    >>>>>  f = 1/0.55*R*C [my R = 10K, C = 47uF]
 
 Uses DSPI for SPI bus control.
 Constructor takes two parameters: LCD_SS, DISP
